@@ -1,0 +1,111 @@
+/******	COLORS *********************************/
+
+$backgroundColor: #82A154;
+$darkTextColor: #4E6133;
+$lightTextColor: #eee;
+$darkBorderColor: #404F29;
+
+
+/****** FONTS *******************************/
+
+$font-stack: Helevetica, sans-serif;
+
+/****  ELIMINATE DEFAULT LIST+LINK STYLINGS *********/
+ul {
+	padding-left: 0px;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/****** MOBILE STYLING **********************/
+
+body {
+	font: $font-stack;
+	background: $backgroundColor;
+	text-align: center;
+}
+
+.header {
+	font-size: 3em;
+	a {
+		color: $lightTextColor;
+	}
+}
+
+.nav li {
+	display: inline;
+	margin: 0 10px;
+	a {
+		font-size: 1.3em;
+		color: $darkBorderColor;
+	}
+	.selected {
+		color: $lightTextColor;
+	}
+}
+
+.main,
+.gallery {
+	font-size: 1.5em;
+	background: $lightTextColor;
+	border-top: solid 12px $darkBorderColor;
+	border-bottom: solid 12px $darkBorderColor;
+
+	a p {
+		color: $darkBorderColor;
+		margin-bottom: 0px;
+		visibility: hidden;
+	}
+
+	li {
+		display: inline-block;
+		margin: 50px 20px;
+		width: 120px;
+		height: 120px;
+		border: solid 5px $darkTextColor;
+		border-radius: 50%;
+	}
+
+	li:hover {
+		background: $backgroundColor;
+		transition: background .8s;
+		a p {
+			display: block;
+			visibility: visible;
+			transition: visibility .2s;
+		}
+	}
+}
+
+.main li a img {
+		width: 50px;
+		height: 50px;
+		padding: 35px 25px 25px 25px;
+}
+
+.gallery li a img {
+	width: 120px;
+	height: 120px;
+	padding: 0px;
+	border-radius: 50%;
+}
+
+
+.foot {
+	p {
+	color: $darkBorderColor;
+	}
+	li {
+	padding: 5px 20px;
+	display: inline;
+	}
+	.social-icon {
+		opacity: .5;
+	}
+}
